@@ -1,0 +1,39 @@
+{
+  "name": "3000f_api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "build": "babel src --out-dir dist",
+    "restart": "rimraf dist && yarn build && yarn start",
+    "dev": "NODE_ENV=development nodemon --exec yarn restart",
+    "prod": "NODE_ENV=production yarn restart",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Roger Rondon",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.7",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.8.3",
+    "@babel/preset-env": "^7.8.7",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-promise": "^4.2.1",
+    "nodemon": "^2.0.2",
+    "prettier": "^1.19.1",
+    "rimraf": "^3.0.2"
+  }
+}
